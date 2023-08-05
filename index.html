@@ -1,65 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final-Module3</title>
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location founder</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>MY PUBLIC IP ADDRESS :<span id="ip" style="color: rgb(14, 169, 14);"></span></h1>
-        <button id="get-data">Get Data</button>
-
-        <div class="info-container">
-            <div class="info-content">
-                <div id="lat">Lat:</div>
-                <div id="long">Long:</div>
-            </div>
-
-            <div class="info-content">
-                <div id="city">City:</div>
-                <div id="region">Region:</div>
-            </div>
-
-            <div class="info-content">
-                <div id="organisation">Organisation:</div>
-                <div id="hostname">Hostname:</div>
-            </div>
-        </div>
-
-        <div id="x"></div>
-
-        <iframe 
-        id="map"
-        style="margin-top: 20px;"
-        width="100%" 
-        height="400" 
-        frameborder="0" 
-        scrolling="no" 
-        marginheight="0" 
-        marginwidth="0" 
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        src="">
-        </iframe>
-
-        <div class="pin-container" style="display:none">
-            <div id="time-zone">Time Zone:</div>
-            <div id="date-time">Date And Time:</div>
-            <div id="pincode">Pincode:</div>
-            <div id="message">Message:</div>
-        </div>
-
-        <input id="search" type="search" placeholder="Filter">
-
-        <div class="post-container">
-        </div>
-
+      <!-- --------Left Container---------- -->
+      <div class="left">
+        <h1>Post Office Application.</h1>
+        <p>
+          This Application Allows you to extract information about the nearest
+          Post Offices, based on your location.
+        </p>
+        <img src="./undraw_messenger_re_8bky 1.png" alt="" />
+      </div>
+      <!-- ---------------------------Right Container----------------------------- -->
+      <div class="right">
+        <h1>Your Current IP Address is <span id="yourIp"></span></h1>
+        <button onclick="ShowData()">Get Started</button>
+      </div>
     </div>
 
-    <script src="./script.js"></script>
-</body>
+    <div class="post" id="post">
+      <div class="dataDiv" id="dataDiv">
+        <!-- <nav>
+        <div class="nav">
+          <h1>IP Address : <span id="IpAdd">127.0.01</span></h1>
+
+          <div class="information">
+            <div class="lat">
+              <h1>Lat:</h1>
+              <h1>Long:</h1>
+            </div>
+            <div id="city">
+              <h1>City:</h1>
+              <h1>Region:</h1>
+            </div>
+            <div id="organisation">
+              <h1>Organisation:</h1>
+              <h1>Hostname:</h1>
+            </div>
+          </div>
+        </div>
+        <div class="map">
+          <h1>Your Current Location</h1>
+          <img
+            src="./Screenshot 2022-12-14 at 7.18 1 (1).png"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </nav> -->
+      </div>
+
+      <div class="about" id="about">
+        <div class="info-div" id="info-div">
+          <!-- <h1 id="info">More Information About You</h1>
+          <div class="about-info">
+            <h1>Time Zone:</h1>
+            <h1>Date And Time:</h1>
+            <h1>Pincode:</h1>
+            <h1>Message:</h1>
+              <h1> Number of pincode(s) found:</h1>
+          </div> -->
+        </div>
+
+        <!-- <div id="postalCard">
+          <div class="card">
+            <div class="name">Name</div>
+            <div class="Type">Branch Type</div>
+            <div class="status">Delivery Status</div>
+            <div class="dis">District</div>
+            <div class="div">Division</div>
+          </div>
+          <div class="card">
+            <div class="name">Name</div>
+            <div class="Type">Branch Type</div>
+            <div class="status">Delivery Status</div>
+            <div class="dis">District</div>
+            <div class="div">Division</div>
+          </div>
+          <div class="card">
+            <div class="name">Name</div>
+            <div class="Type">Branch Type</div>
+            <div class="status">Delivery Status</div>
+            <div class="dis">District</div>
+            <div class="div">Division</div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
